@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor "Administrador" as adm
+actor "Operador de Estoque" as ope
+
+package "Módulo Aplicação" {
+  usecase "Iniciar Aplicação" as MA1
+  usecase "Encerrar Aplicação" as MA2
+}
+
+package "Módulo Movimentação de Estoque" {
+  usecase "Registrar Entrada de Estoque" as ME1
+  usecase "Registrar Saída de Estoque" as ME2
+  usecase "Consultar Histórico de Movimentações" as ME3
+}
+
+package "Módulo Nível de Usuário" {
+  usecase "Definir Nível de Acesso" as NU1
+  usecase "Consultar Níveis de Usuário" as NU2
+}
+
+adm --> MA1
+adm --> MA2
+adm --> NU1
+adm --> NU2
+
+ope --> ME1
+ope --> ME2
+ope --> ME3
+@enduml

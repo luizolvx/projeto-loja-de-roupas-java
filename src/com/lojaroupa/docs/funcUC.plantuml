@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+
+actor "Recursos Humanos" as rh
+actor "Atendente" as at
+actor "Logística" as lg
+
+package "Módulo Funcionário" {
+  usecase "Cadastrar Funcionário" as UF1
+  usecase "Atualizar Funcionário" as UF2
+  usecase "Consultar Funcionário" as UF3
+  usecase "Remover Funcionário" as UF4
+}
+
+package "Módulo Item Pedido" {
+  usecase "Adicionar Item ao Pedido" as UI1
+  usecase "Atualizar Item do Pedido" as UI2
+  usecase "Consultar Itens do Pedido" as UI3
+  usecase "Remover Item do Pedido" as UI4
+}
+
+package "Módulo Logística Pedido" {
+  usecase "Gerar Rota de Entrega" as UL1
+  usecase "Atualizar Status de Entrega" as UL2
+  usecase "Consultar Logística do Pedido" as UL3
+}
+
+rh --> UF1
+rh --> UF2
+rh --> UF3
+rh --> UF4
+
+at --> UI1
+at --> UI2
+at --> UI3
+at --> UI4
+
+lg --> UL1
+lg --> UL2
+lg --> UL3
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+
+actor "Atendente" as a
+actor "Estoquista" as e
+
+package "Módulo Cliente" {
+  usecase "Cadastrar Cliente" as UC1
+  usecase "Atualizar Cliente" as UC2
+  usecase "Consultar Cliente" as UC3
+  usecase "Remover Cliente" as UC4
+}
+
+package "Módulo Categoria" {
+  usecase "Cadastrar Categoria" as UC5
+  usecase "Atualizar Categoria" as UC6
+  usecase "Consultar Categoria" as UC7
+  usecase "Remover Categoria" as UC8
+}
+
+package "Módulo Estoque" {
+  usecase "Adicionar Produto ao Estoque" as UC9
+  usecase "Atualizar Estoque" as UC10
+  usecase "Consultar Estoque" as UC11
+  usecase "Remover Produto do Estoque" as UC12
+}
+
+a --> UC1
+a --> UC2
+a --> UC3
+a --> UC4
+a --> UC5
+a --> UC6
+a --> UC7
+a --> UC8
+
+e --> UC9
+e --> UC10
+e --> UC11
+e --> UC12
+@enduml
