@@ -36,7 +36,7 @@ O sistema é dividido em dois perfis de acesso principais: **Administrador** e *
 
 ---
 
-## ⚙️ Estrutura do Banco de Dados
+## Estrutura do Banco de Dados
 
 O sistema utiliza um banco de dados relacional chamado `lojaroupa`, composto por 11 tabelas interligadas para gerenciar todas as operações da loja.
 
